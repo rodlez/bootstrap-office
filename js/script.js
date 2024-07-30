@@ -16,5 +16,34 @@ function userScroll(startPixel, colorChange) {
     });
 }
 
-// Once the DOM id loaded the userScroll will be executed
+/**
+ * Take the counter class search for every data-target and show a count up timer
+ * @param {int} delay In ms to the count up timer
+ */
+function incrementStats(delay) {
+    const counters = document.querySelectorAll('.counter');
+  
+    counters.forEach((counter) => {
+      counter.innerText = 0;
+
+      const updateCounter = () => {
+        // + cast string to int
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;         
+  
+        if (count < target) {
+          counter.innerText = count + 1;
+          setTimeout(updateCounter, delay);
+        } else {
+          counter.innerText = target;
+        }
+      };
+  
+      updateCounter();
+    });
+  }
+
+
+// Once the DOM id loaded the functions will be executed
 document.addEventListener('DOMContentLoaded', userScroll(50, 'bg-white'));
+document.addEventListener('DOMContentLoaded', incrementStats(10));
