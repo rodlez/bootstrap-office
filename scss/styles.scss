@@ -60,6 +60,19 @@ $services-icons: #f8f8ff;
     width: 500px;
     opacity: 0.7;
 }
+// Projects links
+.projects-link {
+    text-decoration: none;    
+    color: var(--bs-secondary);
+    font-weight: 500;
+    font-size: 16px;
+    &:hover{
+        color: var(--bs-secondary);
+        text-decoration: underline;    
+        text-decoration-color: var(--bs-secondary);
+        text-decoration-thickness: 2px;  
+    }
+}
   
 
 // Small Screens
@@ -126,6 +139,11 @@ $services-icons: #f8f8ff;
           }
         .first-row {
             margin-bottom: 0px !important;
+        }
+    }
+    .projects {
+        .card-body {
+            text-align: center;
         }
     }
 }
