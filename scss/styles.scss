@@ -1,0 +1,11 @@
+// Change the color hover in the navigation menu Contact button
+.btn-outline-secondary {
+    color: var(--bs-secondary);
+}
+// & reference to the parent class in sass
+.btn-outline-secondary {
+    &:hover {
+      color: #fff;
+    }
+}
+  
