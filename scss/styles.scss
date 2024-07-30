@@ -1,3 +1,7 @@
+// Variables
+$services-icons: #fff5ee;
+
+
 // Xlarge text as Utility class
 .xl-text {
     font-size: 75px;
@@ -93,5 +97,21 @@
         bottom: 100px;
         right: -50px;
         width: 300px;
+    }
+    
+    
+}
+
+@media (max-width: 768px) {
+    // Services, border and margin icons in small screens
+    .services {
+        .col-md-4 {
+            background-color: $services-icons;
+            border-bottom: 1px #ccc solid;
+            padding: 20px 0;
+          }
+        .first-row {
+            margin-bottom: 0px !important;
+        }
     }
 }
